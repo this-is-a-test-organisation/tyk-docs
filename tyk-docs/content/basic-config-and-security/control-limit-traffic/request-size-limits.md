@@ -26,7 +26,7 @@ Tyk Cloud Classic automatically enforces a strict request size limit of 1MB on a
 {{< /note >}}
 
 ### Applying a size limit for all APIs on your Gateway
-You can optionally configure a request size limit (in bytes) that will be applied to all APIs on your Tyk Gateway by adding `max_request_body_size` to the `http_server_options` [element]({{< ref "/tyk-oss-gateway/configuration#http_server_options" >}}) of your `tyk.conf` Gateway configuration, for example:
+You can optionally configure a request size limit (in bytes) that will be applied to all APIs on your Tyk Gateway by adding `max_request_body_size` to the `http_server_options` [element]({{< ref "/tyk-oss-gateway/configuration#http_server_options" >}}) of your `tyk.conf` Gateway configuration. For example:
 ```
 "max_request_body_size": 5000
 ```
