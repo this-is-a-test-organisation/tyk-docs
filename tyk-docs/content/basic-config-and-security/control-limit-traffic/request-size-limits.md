@@ -11,7 +11,7 @@ weight: 4
 
 ## Overview
 
-With Tyk, you are able to apply limits to the size of requests made to your HTTP APIs; you might do this to protect your upstream services or even the gateway itself, for example, to avoid excessive memory usage or brute force attacks.
+With Tyk, you can apply limits to the size of requests made to your HTTP APIs. You might use this feature to protect your Tyk Gateway or upstream services from avoid excessive memory usage or brute force attacks.
 
 Tyk offers a flexible tiered system of limiting request sizes ranging from globally applied limits across all APIs deployed on the gateway down to specific size limits for individual API endpoints.
 
