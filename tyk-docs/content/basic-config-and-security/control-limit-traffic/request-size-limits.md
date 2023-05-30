@@ -39,10 +39,10 @@ You can optionally configure a request size limit (in bytes) to an API by adding
 "global_size_limit": 2500 
 ```
 
-This limit is applied for all endpoints _within an API_, is evaluated after the Gateway-wide size limit and before any endpoint-specific size limit.
+This limit is applied for all endpoints _within an API_. It is evaluated after the Gateway-wide size limit and before any endpoint-specific size limit.
 
 ### Applying a size limit for a specific API endpoint
-Tyk provides a _Request Size Limit_ middleware that can be configured per API endpoint, to give you the most granular control over request sizes.
+Tyk provides a _Request Size Limit_ middleware that can be configured per API endpoint. This gives you the most granular control over request sizes.
 
 You can configure this easily from the API Designer in the Tyk Dashboard, or by manually adding the configuration to your API definition.
 
