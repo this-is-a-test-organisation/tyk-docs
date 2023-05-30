@@ -17,7 +17,7 @@ Tyk offers a flexible tiered system of limiting request sizes ranging from globa
 
 All size limits are stated in bytes and are applied only to the request _body_, excluding the headers.
 
-Tyk compares each incoming API request with the configured maximum size(s) and will reject any request that exceeds the size you have set, returning an HTTP 400 error with the message "Request is too large".
+Tyk compares each incoming API request with the configured maximum size(s) and will reject any request that exceeds the size you have set, returning an HTTP 4xx error as detailed below.
 
 {{< note success >}}
 **Note**  
@@ -31,7 +31,7 @@ You can optionally configure a request size limit (in bytes) that will be applie
 "max_request_body_size": 5000
 ```
 
-This Gateway-wide size limit will be evaluated before per-API or per-endpoint settings.
+This Gateway-wide size limit will be evaluated before per-API or per-endpoint settings. If this test fails, the Tyk Gateway will report `413 Request Entity Too Large`.
 
 ### Applying a size limit for a specific API
 You can optionally configure a request size limit (in bytes) to an API by adding `global_size_limit` to the `version` element of the API Definition, for example:
@@ -39,14 +39,14 @@ You can optionally configure a request size limit (in bytes) to an API by adding
 "global_size_limit": 2500 
 ```
 
-This limit is applied for all endpoints _within an API_. It is evaluated after the Gateway-wide size limit and before any endpoint-specific size limit.
+This limit is applied for all endpoints _within an API_. It is evaluated after the Gateway-wide size limit and before any endpoint-specific size limit. If this test fails, the Tyk Gateway will report `400 Request is too large`.
 
 ### Applying a size limit for a specific API endpoint
 Tyk provides a _Request Size Limit_ middleware that can be configured per API endpoint. This gives you the most granular control over request sizes.
 
 You can configure this easily from the API Designer in the Tyk Dashboard, or by manually adding the configuration to your API definition.
 
-This limit will be applied after any Gateway-level or API-level size limits; in keeping with the other size limit options provided by Tyk, this value is given in bytes.
+This limit will be applied after any Gateway-level or API-level size limits; in keeping with the other size limit options provided by Tyk, this value is given in bytes. If this test fails, the Tyk Gateway will report `400 Request is too large`.
 
 #### Using the Tyk Dashboard
 You can enforce a request size limit for a specific API endpoint using the API Endpoint Designer:
