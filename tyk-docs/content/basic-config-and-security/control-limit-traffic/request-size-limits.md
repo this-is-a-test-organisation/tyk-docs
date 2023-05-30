@@ -49,7 +49,7 @@ You can configure this easily from the API Designer in the Tyk Dashboard, or by 
 This limit will be applied after any Gateway-level or API-level size limits; in keeping with the other size limit options provided by Tyk, this value is given in bytes.
 
 #### Using the Tyk Dashboard
-To enforce a request size limit for a specific API endpoint, you will use from your API Endpoint Designer:
+You can enforce a request size limit for a specific API endpoint using the API Endpoint Designer:
 
 1.  Click **ADD ENDPOINT**.
 
