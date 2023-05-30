@@ -46,7 +46,7 @@ Tyk provides a _Request Size Limit_ middleware that can be configured per API en
 
 You can configure this easily from the API Designer in the Tyk Dashboard, or by manually adding the configuration to your API definition.
 
-This limit will be applied after any Gateway-level or API-level size limits; as for all of the size limit options provided by Tyk, this value is given in bytes.
+This limit will be applied after any Gateway-level or API-level size limits; in keeping with the other size limit options provided by Tyk, this value is given in bytes.
 
 #### Using the Tyk Dashboard
 To enforce a request size limit for a specific API endpoint, you will use from your API Endpoint Designer:
