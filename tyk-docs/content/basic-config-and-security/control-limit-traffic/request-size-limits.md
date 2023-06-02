@@ -66,7 +66,7 @@ You can enforce a request size limit for a specific API endpoint using the API E
 5.  Save the API.
 
 #### Manually configuring the API Definition
-To add the _Request Size Limit_ middleware in your API Definition, simply add a new section to the `extended_paths` block of your API Definition configuration called `size_limits`:
+To add the _Request Size Limit_ middleware to your API Definition, create a new section in the `extended_paths` block of your API Definition configuration called `size_limits`:
 
 ```{.copyWrapper}
 "size_limits": [
