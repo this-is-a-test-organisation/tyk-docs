@@ -22,7 +22,7 @@ Tyk compares each incoming API request with the configured maximum size(s) and w
 {{< note success >}}
 **Note**  
 
-Tyk Cloud Classic automatically enforces a strict request size limit of 1MB on all inbound requests via our cloud architecture. This does not affect Multi-Cloud users.
+Tyk Cloud Classic enforces a strict request size limit of 1MB on all inbound requests via our cloud architecture. This does not affect Multi-Cloud users.
 {{< /note >}}
 
 ### Applying a size limit for all APIs on your Gateway
