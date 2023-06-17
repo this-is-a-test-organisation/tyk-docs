@@ -62,7 +62,7 @@ Each of the object categories will also have an effect on the dashboard navigati
 #### User Owned Analytics
 In Tyk Dashboard v5.1 (and LTS patches v4.0.14 and v5.0.3) we introduced a new user permission (`owned_analytics`) that can be assigned to a user to restrict their access to analytics data generated for APIs that they do not own. This facility is provided to avoid data leakage amongst different users and teams.
 
-This permission is only relevant if RBAC and API Ownership are enabled for your Dashboard.
+This permission is only relevant if RBAC and [API Ownership]({{< ref "tyk-dashboard/rbac#multi-team-setup-using-api-ownership" >}}) are enabled for your Dashboard.
 
  - `owned_analytics` can be added to the `user_permissions` object and can can take one of two values: `read` or `deny`
  - When `analytics=read` and `owned_analytics=read` the user will only have access to analytics that can be filtered by API (currently only API Usage and Error Counts); no other analytics (e.g. Endpoint Popularity) will be available to them. These restrictions are noted on the appropriate pages in the [Analytics documentation]({{< ref "tyk-dashboard-analytics" >}}) .
