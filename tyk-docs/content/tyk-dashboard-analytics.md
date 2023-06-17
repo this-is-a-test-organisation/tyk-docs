@@ -1,12 +1,15 @@
 ---
 date: 2017-03-24T15:49:11Z
 title: Analytics
+description: Detail the analytics types that Tyk Pump generate and Dashboard presents via APIs or GUI.
+tags: ["Tyk analytics", "Tyk pump analytics", "Tyk aggregated analytics", "Tyk detailed analytics"]
 weight: 3
-menu: 
-    main:
-        parent: "Tyk Dashboard"
+menu:
+  main:
+    parent: "Tyk Dashboard"
 aliases:
   - /analyse/
+  - /tyk-stack/tyk-pump/tyk-dash-analytics/
 ---
 
 The Tyk Dashboard has a full set of analytics functions and graphs that you can use to segment and view your API traffic and activity. The Dashboard offers a great way for you to debug your APIs and quickly pin down where errors might be cropping up and for what clients.
@@ -29,8 +32,8 @@ When you make a request to the Tyk Gateway, it creates analytics records and sto
 {{< tabs_start >}}
 {{< tab_start "MongoDB" >}}
 
- `mongo` (per request) and `mongo_aggregate` (for aggregate).
- {{< tab_end >}}
+`mongo` (per request) and `mongo_aggregate` (for aggregate).
+{{< tab_end >}}
 {{< tab_start "SQL" >}}
 
 `sql` (per request) and `sql_aggregate` (for aggregate)
