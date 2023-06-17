@@ -66,7 +66,7 @@ This permission is only relevant if RBAC and API Ownership are enabled for your 
 
  - `owned_analytics` can be added to the `user_permissions` object and can can take one of two values: `read` or `deny`
  - When `analytics=read` and `owned_analytics=read` the user will only have access to analytics that can be filtered by API (currently only API Usage and Error Counts); no other analytics (e.g. Endpoint Popularity) will be available to them. These restrictions are noted on the appropriate pages in the [Analytics documentation]({{< ref "tyk-dashboard-analytics" >}}) .
- - When `analytics=read` and `owned_analytics=deny` the user will have full visibility to analytics for all APIs, exactly as they would if they were granted `analytics=read` permission without `enable_ownership` configured.
+When `analytics=read` and `owned_analytics=deny` the user will have full visibility to analytics for all APIs, exactly as they would if they were granted `analytics=read` permission without `enable_ownership` configured. This is equivalent to disabling the owned analytics feature.
 
  {{< note success >}}
 **Note**  
