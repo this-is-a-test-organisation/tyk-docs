@@ -33,7 +33,7 @@ Selecting the **Account is Admin** checkbox from the Dashboard gives the user fu
 
 The permissions object, when fully set as an API entry or in MongoDB, looks like this:
 
-```{.copyWrapper}
+```{json}
 "user_permissions": {
   "analytics": "read",
   "apis": "write",
@@ -78,7 +78,7 @@ When `analytics=read` and `owned_analytics=deny` the user will have full visibil
 {{< /note >}}
 
 For example, to configure the user permissions for an analytics only user who should have visibility only of their allocated APIs, you might configure:
-```{.copyWrapper}
+```{json}
 "user_permissions": {
   "analytics": "read",
   "owned_analytics": "read",
